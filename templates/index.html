@@ -37,45 +37,48 @@
     <i class="fas fa-file-code"></i>
     <h2>Projects</h2>
     <div id="project-list">
+       <!-- Professional Projects -->
+        <h3 style="margin-top:40px;">Professional Projects</h3>
         <div class="a-project">
-            <h3>License Server (Enpass)</h3>
+            <h4>License Server (Enpass)</h4>
             <p>
-                Backend service managing user and team licensing workflows, subscription lifecycle,
-                and core business logic. Built using Django and DRF with optimized PostgreSQL schemas.
-            </p>
-            <p>
-                Designed secure APIs for authentication, license validation, onboarding,
-                transactions, and real-time license verification across web, desktop, and mobile clients.
+                Backend service managing user and team licensing workflows,
+                subscription lifecycle, and core business logic using Django and DRF.
+                Designed secure REST APIs for authentication, onboarding,
+                
+                transactions, and real-time license validation across web, desktop, and mobile clients..
+                Optimized PostgreSQL schemas for scalability.
             </p>
         </div>
-        
-        <div class="a-project">
-            <h3>AuxServer (Enpass)</h3>
-            <p>
-                Enterprise backend service providing audit monitoring, password health checks,
-                recovery workflows, and secure vault sharing for business teams.
-            </p>
-            <p>
-                Implemented role-based access control, event logging, and secure API architecture
-                to support enterprise-grade administrative features.
-            </p>
-        </div>
-        {% for project in projects %}
 
-          <div id="project" class="a-project">
-                <h3><a href="{{ url_for('detail_project', id=project.id) }}">{{ project.title }}</a></h3>
-                <p>
-                    {{ project.desc }}
-                </p>
-                <p>
-                    Skills: {{ project.skills }}. 
-                </p>
+        <div class="a-project">
+            <h4>AuxServer (Enpass)</h4>
+            <p>
+                Enterprise backend service providing audit monitoring,
+                password health checks, recovery workflows, event logging,
+                and secure vault sharing with role-based access control.
+            </p>
+        </div>
+
+        <!-- Training Projects From Database -->
+        <h3 style="margin-top:50px;">Training & Learning Projects</h3>
+
+        {% for project in projects %}
+            <div class="a-project">
+                <h4>
+                    <a href="{{ url_for('detail_project', id=project.id) }}">
+                        {{ project.title }}
+                    </a>
+                </h4>
+                <p>{{ project.desc }}</p>
+                <p>Skills: {{ project.skills }}</p>
                 <a href="{{ project.git_url }}" class="github-btn">
                     <i class="fab fa-github"></i>
                     View on GitHub
                 </a>
             </div>
         {% endfor %}
+    </div>
     <div id="triangle4"></div>
 </section>
 <section id="contact">
