@@ -3,15 +3,17 @@
 
 {% block content %}
 <section class="header">
-    <h1>Python Developer</h1>
-    <p>Just like Goku chasing endless power-ups and unlock new levels of creativity and problem-solving.</p>
+    <h1>Backend Engineer</h1>
+    <p>Building scalable Django APIs, optimizing systems, and exploring AI with Python.</p>
     <img src="/static/images/IMG-20240602-WA0104~2.jpg" alt="Headshot of myself">
 </section>
 <section id="about">
     <h2>About Me</h2>
     <p>
-        Hi! I’m a Python developer with a passion for building efficient applications and automating tasks. I specialize in
-        Flask for web development and enjoy working with databases like SQLAlchemy and SQLite.
+       Hi! I’m a Software Development Engineer with 1 year of experience building backend
+        systems using Python, Django, and Django REST Framework. I specialize in designing
+        RESTful APIs, implementing business logic, and optimizing PostgreSQL databases for
+        scalable applications.
     </p>
     <div id="triangle1"></div>
     <div id="triangle2"></div>
@@ -22,13 +24,12 @@
     <h2>Skills</h2>
     <ul>
         <li>Python</li>
-        <li>Flask/Django</li>
-        <li>SQLAlchemy</li>
-        <li>CSS</li>
-        <li>HTML</li>
-        <li>GitHub</li>
-        <li>Visual Studio Code</li>
-        <li>JavaScript Basics</li>
+        <li>Django & Django REST Framework</li>
+        <li>PostgreSQL</li>
+        <li>Celery (Background Tasks)</li>
+        <li>RESTful API Design</li>
+        <li>Git</li>
+        <li>Artificial Intelligence (Exploring with Python)</li>
     </ul>
 </section>
 <section id="projects">
@@ -36,6 +37,29 @@
     <i class="fas fa-file-code"></i>
     <h2>Projects</h2>
     <div id="project-list">
+        <div class="a-project">
+            <h3>License Server (Enpass)</h3>
+            <p>
+                Backend service managing user and team licensing workflows, subscription lifecycle,
+                and core business logic. Built using Django and DRF with optimized PostgreSQL schemas.
+            </p>
+            <p>
+                Designed secure APIs for authentication, license validation, onboarding,
+                transactions, and real-time license verification across web, desktop, and mobile clients.
+            </p>
+        </div>
+        
+        <div class="a-project">
+            <h3>AuxServer (Enpass)</h3>
+            <p>
+                Enterprise backend service providing audit monitoring, password health checks,
+                recovery workflows, and secure vault sharing for business teams.
+            </p>
+            <p>
+                Implemented role-based access control, event logging, and secure API architecture
+                to support enterprise-grade administrative features.
+            </p>
+        </div>
         {% for project in projects %}
 
           <div id="project" class="a-project">
